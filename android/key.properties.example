@@ -1,0 +1,4 @@
+storePassword=replace-with-ci-secret
+keyPassword=replace-with-ci-secret
+keyAlias=upload
+storeFile=/absolute/path/to/upload-keystore.jks

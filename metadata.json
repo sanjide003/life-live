@@ -1,0 +1,10 @@
+{
+  "name": "Remix: Remix: Livelife-apk",
+  "description": "Imported from GitHub: dsdjamia-coder/Livelife-apk",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

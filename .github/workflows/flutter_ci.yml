@@ -1,0 +1,36 @@
+name: Flutter CI
+
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+      - name: Reject generated binary logo diffs
+        run: |
+          if git diff --name-only origin/${{ github.base_ref || 'main' }}...HEAD | grep -E '(^assets/.*\.(png|ico|jpg|jpeg|webp)$|android/.*/.*\.(png|webp)$)'; then
+            echo "Generated binary assets must not be committed in PR diffs. Run tool/generate_logo_assets.py locally for packaging only."
+            exit 1
+          fi
+      - name: Dependencies
+        run: flutter pub get
+      - name: Format
+        run: dart format --set-exit-if-changed lib test integration_test
+      - name: Analyze
+        run: flutter analyze
+      - name: Unit and widget tests
+        run: flutter test
+      - name: Integration smoke tests
+        run: flutter test integration_test
+      - name: Dependency audit
+        run: flutter pub outdated
+        continue-on-error: true

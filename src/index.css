@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom styles for professional scrollbars and UI enhancements */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* Immersive Dark Mode Theme Support & Multi-Contrast Fixes */
+.dark body {
+  background-color: #050508 !important; /* Immersive near-black background */
+  color: #f8fafc !important; /* Slate 50 */
+}
+
+.dark .bg-slate-50 {
+  background-color: #050508 !important; /* Immersive near-black background */
+}
+
+.dark .bg-slate-950 {
+  background-color: #020204 !important; /* Absolute near-black background */
+}
+
+.dark .bg-white {
+  background-color: #0d0f14 !important; /* Premium pitch-dark charcoal card background */
+}
+
+.dark .bg-slate-900 {
+  background-color: #0d0f14 !important; /* Premium pitch-dark charcoal card background */
+}
+
+.dark .bg-slate-100 {
+  background-color: #12151e !important; /* Deep gray-black interactive container background */
+}
+
+.dark .bg-slate-800 {
+  background-color: #12151e !important; /* Deep gray-black interactive container background */
+}
+
+/* Translucent Soft Glow Elements for Accent/Badge Backgrounds */
+.dark .bg-indigo-50 { background-color: rgba(99, 102, 241, 0.12) !important; color: #a5b4fc !important; }
+.dark .bg-emerald-50 { background-color: rgba(16, 185, 129, 0.12) !important; color: #6ee7b7 !important; }
+.dark .bg-rose-50 { background-color: rgba(244, 63, 94, 0.12) !important; color: #fda4af !important; }
+.dark .bg-amber-50 { background-color: rgba(245, 158, 11, 0.12) !important; color: #fef08a !important; }
+.dark .bg-blue-50 { background-color: rgba(59, 130, 246, 0.12) !important; color: #93c5fd !important; }
+.dark .bg-purple-50 { background-color: rgba(168, 85, 247, 0.12) !important; color: #d8b4fe !important; }
+
+.dark .bg-slate-50\/50 { background-color: rgba(18, 21, 30, 0.5) !important; }
+.dark .bg-indigo-50\/50 { background-color: rgba(99, 102, 241, 0.08) !important; }
+.dark .bg-emerald-50\/50 { background-color: rgba(16, 185, 129, 0.08) !important; }
+
+/* Text Overrides for High Contrast Legibility */
+.dark .text-slate-900 { color: #f8fafc !important; /* Slate 50 */ }
+.dark .text-slate-800 { color: #f1f5f9 !important; /* Slate 100 */ }
+.dark .text-slate-700 { color: #cbd5e1 !important; /* Slate 300 */ }
+.dark .text-slate-600 { color: #94a3b8 !important; /* Slate 400 */ }
+.dark .text-slate-500 { color: #94a3b8 !important; /* Slate 400 */ }
+.dark .text-slate-400 { color: #64748b !important; /* Slate 500 */ }
+
+/* Accent Text Upgrades */
+.dark .text-indigo-600 { color: #a5b4fc !important; }
+.dark .text-emerald-600 { color: #34d399 !important; }
+.dark .text-emerald-700 { color: #6ee7b7 !important; }
+.dark .text-rose-600 { color: #f87171 !important; }
+.dark .text-rose-700 { color: #fca5a5 !important; }
+.dark .text-amber-600 { color: #fde047 !important; }
+.dark .text-blue-600 { color: #60a5fa !important; }
+.dark .text-purple-600 { color: #c084fc !important; }
+
+/* Border Enhancements */
+.dark .border-slate-200 { border-color: #161924 !important; /* Ultra thin dark border */ }
+.dark .border-slate-100 { border-color: #161924 !important; }
+.dark .border-slate-800 { border-color: #161924 !important; }
+.dark .border-slate-900 { border-color: #11141e !important; }
+.dark .border-slate-200\/80 { border-color: rgba(22, 25, 36, 0.8) !important; }
+
+/* Form Field Adjustments */
+.dark input, .dark select, .dark textarea {
+  background-color: #0d0f14 !important; /* Deep dark input background */
+  color: #f1f5f9 !important;
+  border-color: #1c1f2e !important; /* Dark input borders */
+}
+
+.dark input::placeholder, .dark textarea::placeholder {
+  color: #475569 !important; /* Slate 600 */
+}
+
+/* Hover Overrides */
+.dark .hover\:bg-slate-100:hover {
+  background-color: #12151e !important;
+}
+
+.dark .hover\:border-indigo-100:hover {
+  border-color: #4f46e5 !important; /* Indigo 600 */
+}
+
+/* Pristine Pure Light Theme Visual Style */
+html:not(.dark) body {
+  background-color: #ffffff !important; /* Pure solid white backdrop */
+  color: #0f172a !important; /* Deep contrast slate-900 */
+}
+
+html:not(.dark) .bg-slate-50 {
+  background-color: #ffffff !important; /* Force clean white canvas */
+}
+
+html:not(.dark) .bg-white {
+  background-color: #ffffff !important; /* Force pure solid white */
+}
+
+/* Guarantee crisp solid white background for header, mobile bottom navigation, and mobile menu overlays in light theme */
+html:not(.dark) header,
+html:not(.dark) .fixed.bottom-0,
+html:not(.dark) [id="standalone_header"],
+html:not(.dark) .bg-white\/95 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Force bottom navigation buttons and icons in light theme */
+html:not(.dark) .fixed.bottom-0 button {
+  color: #64748b !important; /* Inactive icons are a clean slate gray instead of black */
+}
+
+html:not(.dark) .fixed.bottom-0 button:hover {
+  color: #334155 !important;
+}
+
+/* Ensure active/selected tab has a beautiful indigo color in light theme instead of black */
+html:not(.dark) .fixed.bottom-0 button.text-indigo-600,
+html:not(.dark) .fixed.bottom-0 button[class*="text-indigo-"],
+html:not(.dark) .fixed.bottom-0 button[class*="text-indigo-"] *,
+html:not(.dark) .fixed.bottom-0 button.text-indigo-600 * {
+  color: #4f46e5 !important; /* Premium active Indigo color */
+}
+
+/* Collapsible sidebar menu items in light theme */
+html:not(.dark) aside button {
+  color: #475569 !important;
+}
+
+html:not(.dark) aside button.bg-indigo-600 {
+  background-color: #4f46e5 !important;
+  color: #ffffff !important;
+}
+
+html:not(.dark) aside button.bg-indigo-600 * {
+  color: #ffffff !important;
+}
+
+/* Form fields inside light theme */
+html:not(.dark) input,
+html:not(.dark) select,
+html:not(.dark) textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+html:not(.dark) input::placeholder,
+html:not(.dark) textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+

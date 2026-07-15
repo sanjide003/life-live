@@ -1,0 +1,53 @@
+name: livelife
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  flutter_riverpod: ^2.6.1
+  firebase_core: ^3.8.1
+  firebase_auth: ^5.3.4
+  google_sign_in: ^6.2.2
+  cloud_firestore: ^5.5.1
+  sqlite3: ^2.4.7
+  sqlite3_flutter_libs: ^0.5.26
+  path_provider: ^2.1.5
+  flutter_local_notifications: ^18.0.1
+  timezone: ^0.10.0
+  health: ^11.1.1
+  shared_preferences: ^2.3.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+  flutter_launcher_icons: ^0.13.1
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon.png"
+  # Run `python3 tool/generate_logo_assets.py` before store packaging to
+  # materialize the final PNG/ICO logo package from assets/app_logo.svg.
+  adaptive_icon_foreground: "assets/icon.png"
+  adaptive_icon_background: "#0F766E"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+
+

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "137390618798",
+    "project_id": "financial-b456b",
+    "storage_bucket": "financial-b456b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137390618798:android:4abb960e94a2ce151b953f",
+        "android_client_info": {
+          "package_name": "com.dsd003.life"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "137390618798-la9jujahsghtb3rsd1kqc9s6j1duv55o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDet6SKHLQwerLBIZpWo5rPZ16A88GGB6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "137390618798-la9jujahsghtb3rsd1kqc9s6j1duv55o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
